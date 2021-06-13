@@ -1,0 +1,94 @@
+No errors -->
+
+hdoop@deepti-VirtualBox:~/np$ ./crc
+
+ Enter the data length= 6
+
+ Enter the divisor  length= 4
+
+ Enter the data : 1 
+0
+0
+1
+0
+0
+
+ Enter the divisor : 1
+1
+0
+1
+
+ The new data is : 100100000
+ The Crc is : 100
+ The Crc is : 100
+ The Crc is : 101
+ The Crc is : 111
+ The Crc is : 011
+ The Crc is : 110
+ The Crc is : 001
+ The data to be send is : 100100001
+ Enter the receiver side data : 1
+0
+0
+1
+0
+0
+0
+0
+1
+
+ The reminder is : 100
+ The reminder is : 100
+ The reminder is : 101
+ The reminder is : 111
+ The reminder is : 011
+ The reminder is : 110
+ The reminder is : 000
+ There is no error found.
+ 
+With errors -->
+hdoop@deepti-VirtualBox:~/np$ ./crc
+
+ Enter the data length= 6
+
+ Enter the divisor  length= 4
+
+ Enter the data : 1
+1
+1
+0
+0
+0
+
+ Enter the divisor : 1
+1
+0
+1
+
+ The new data is : 111000000
+ The Crc is : 111
+ The Crc is : 011
+ The Crc is : 110
+ The Crc is : 001
+ The Crc is : 010
+ The Crc is : 100
+ The Crc is : 101
+ The data to be send is : 111000101
+ Enter the receiver side data : 1
+1
+1
+1
+0
+0
+1
+0
+1
+
+ The reminder is : 111
+ The reminder is : 010
+ The reminder is : 100
+ The reminder is : 101
+ The reminder is : 110
+ The reminder is : 001
+ The reminder is : 011
+ There is error found.
